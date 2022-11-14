@@ -24,8 +24,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 import GetAppIcon from "@mui/icons-material/GetApp";
-// import Login from "../components/Login";
-// import More from "./More";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
@@ -33,15 +31,23 @@ import GTranslateIcon from "@mui/icons-material/GTranslate";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AssistantIcon from "@mui/icons-material/Assistant";
 import AddTaskIcon from "@mui/icons-material/AddTask";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ViewStreamIcon from "@mui/icons-material/ViewStream";
-
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import appliances from "../component/images/appliances.webp"
+import eletronics from "../component/images/electronics.webp"
+import Grocery from "../component/images/Grocery.webp"
+import mobile from "../component/images/mobile.webp"
+import topOffer from "../component/images/topOffer.webp"
+import toys from "../component/images/toys.webp"
+import travel from "../component/images/travel.webp"
+import fashion from "../component/images/fashion.webp"
+import home from "../component/images/home.webp"
+import wheelers from "../component/images/wheelers.webp"
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -57,43 +63,43 @@ function Navbar() {
 
   const itemData = [
     {
-      // img: require('../component/images/topOffer.webp'),
+      img: topOffer,
       title: "Top Offers",
     },
     {
-      // img: img2,
+      img: Grocery,
       title: "Grocery",
     },
     {
-      // img: img3,
+      img:mobile,
       title: "Mobiles",
     },
     {
-      // img: img4,
+      img:fashion,
       title: "Fashion",
     },
     {
-      // img: img5,
+      img: eletronics,
       title: "Electronics",
     },
     {
-      // img: img6,
+      img: home,
       title: "Home",
     },
     {
-      // img: img7,
+      img: appliances,
       title: "Appliances",
     },
     {
-      // img: img8,
+      img: travel,
       title: "Travel",
     },
     {
-      // img: img9,
+      img: toys,
       title: "Beauty, Toys & More",
     },
     {
-      // img: img10,
+      img: wheelers,
       title: "2-Wheelers",
     },
   ];
@@ -385,13 +391,13 @@ function Navbar() {
             key={item.src}
             sx={{ paddingLeft: { xs: 5, sm: 5, md: 0, lg: 0 } }}
           >
-            {/* <img
-              style={{ width: "100%", height: "100px" }}
-              src={`${item.src}?w=164&h=164&fit=crop&auto=format`}
-              srcSet={`${item.src}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            <img
+              style={{ width: "80%" }}
+              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
-            /> */}
+            />
             <ImageListItemBar title={item.title} position="below" />
           </ImageListItem>
         ))}
